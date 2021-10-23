@@ -23,7 +23,7 @@ const ManageProducts = () => {
         <div>
             <h2>All Products</h2>
             {
-                products.map(product => <li>Product ID: {product._id} Name:{product?.name} Price:{product?.price} Quantity: {product?.quantity}<button onClick={() => { handleDelete(product._id) }}>delete</button>
+                products.map(product => <li key={product._id}>Product ID: {product._id} Name:{product?.name} Price:{product?.price} Quantity: {product?.quantity}<button onClick={() => { handleDelete(product._id) }}>delete</button>
                     <Link to={`/products/update/${product._id}`} ><button>Update</button></Link></li>)
             }
         </div>

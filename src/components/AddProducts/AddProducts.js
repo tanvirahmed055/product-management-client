@@ -38,11 +38,11 @@ const AddProducts = () => {
         <div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
-                <input defaultValue="test" {...register("name")} />
+                <input type="text" {...register("name")} />
 
-                <input defaultValue="test" {...register("price")} />
+                <input type="number" {...register("price")} />
 
-                <input defaultValue="test" {...register("quantity")} />
+                <input type="number" {...register("quantity")} />
 
 
 
