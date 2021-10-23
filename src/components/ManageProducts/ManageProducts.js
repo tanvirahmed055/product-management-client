@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
+
+
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([]);
@@ -20,8 +23,8 @@ const ManageProducts = () => {
         <div>
             <h2>All Products</h2>
             {
-                products.map(product => <li>Name:{product?.name} Price:{product?.price} Quantity: {product?.quantity}<button onClick={() => { handleDelete(product._id) }}>delete</button>
-                    {product._id}</li>)
+                products.map(product => <li>Product ID: {product._id} Name:{product?.name} Price:{product?.price} Quantity: {product?.quantity}<button onClick={() => { handleDelete(product._id) }}>delete</button>
+                    <Link to={`/products/update/${product._id}`} ><button>Update</button></Link></li>)
             }
         </div>
     );

@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Header from './components/Header/Header';
 import AddProducts from "./components/AddProducts/AddProducts";
 import ManageProducts from "./components/ManageProducts/ManageProducts";
+import UpdateProduct from "./components/UpdateProduct/UpdateProduct";
 
 function App() {
   return (
@@ -18,10 +19,12 @@ function App() {
             <Route exact path="/manageProducts">
               <ManageProducts></ManageProducts>
             </Route>
-            <Route path="/addProduct">
+            <Route exact path="/addProduct">
               <AddProducts></AddProducts>
             </Route>
-
+            <Route path="/products/update/:id">
+              <UpdateProduct></UpdateProduct>
+            </Route>
           </Switch>
         </div>
       </Router>
